@@ -23,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         out.setOnClickListener(ck->{
+            boolean s = false;
             for (char i : email.getText().toString().toCharArray()){
                 if (i =='@') e = true;
-                else Toast.makeText(this, "Почта должна содержать символ '@'", Toast.LENGTH_SHORT).show();
             }
-
+            if (!e)  Toast.makeText(this, "Почта должна содержать символ '@'", Toast.LENGTH_SHORT).show();
             if (parol.getText().toString().length() <= 8){
 
             Toast.makeText(this, "Пароль должен быть больше 8 символов", Toast.LENGTH_SHORT).show();
